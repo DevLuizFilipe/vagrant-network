@@ -7,7 +7,7 @@
     mode: '0644'
 
 - name: Executar o Web Server
-  ansible.builtin.command: docker compose up -d
+  ansible.builtin.command: docker-compose up -d
   args:
     chdir: /opt/
   changed_when: false

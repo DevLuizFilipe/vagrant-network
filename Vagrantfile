@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
         vb.name = "Web_Server"
     end
     web_server.vm.network "public_network", ip: "192.168.56.52"
-    web_server.vm.network "forwarded_port" guest: 80, host: 80
+    web_server.vm.network "forwarded_port", guest: 80, host: 80
     web_server.vm.synced_folder "./keys", "/keys"
     web_server.vm.synced_folder ".", "/vagrant", disabled: true
     web_server.vm.provision "shell",
